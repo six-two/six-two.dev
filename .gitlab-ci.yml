@@ -1,10 +1,13 @@
-image: ruby:2.3
+image: ruby:2.6.5
 
 variables:
   JEKYLL_ENV: gitlab
   LC_ALL: C.UTF-8
 
 before_script:
+  - ruby --version
+  - gem install bundler
+  - bundle --version
   - bundle install
 
 pages:

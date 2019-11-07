@@ -1,0 +1,74 @@
+---
+---
+
+@import "minima";
+
+// ---------------------------------- all websites -----------------------------
+
+$color-link-hover:  #ffcc00;
+$color-header-line: $color-link-hover;
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $color-link-hover !important;
+  }
+}
+
+.site-icon {
+  width: 40px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 1em;
+}
+.section-header::before, .section-header::after {
+  flex: 1;
+  content: '';
+  border-bottom: 2px solid $color-header-line;
+}
+.section-header::before {
+  margin-right: 0.5em;
+}
+.section-header::after {
+  margin-left: 0.5em;
+}
+
+
+// ---------------------------------- CV website -------------------------------
+.cv .section-header {
+  /* font-weight: bold; */
+  font-size: 2em;
+}
+
+// ---------------------------------- Message/warning boxes --------------------
+// By default it is a blue box, but you can use the "*-message" classes to change that
+.message-box {
+  color: #303030;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  background: #e0f7ff;
+  border: 1px solid #8ed9f6;
+}
+
+.message-box span {
+  font-weight:bold;
+  text-transform:uppercase;
+}
+
+.error-message {
+  background: #ffeaea;
+  border: 1px solid #f5aca6;
+}
+
+.warning-message {
+  background: #fffac3;
+  border: 1px solid #f0c779;
+}

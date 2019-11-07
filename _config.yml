@@ -1,0 +1,38 @@
+title: six-two
+author: six-two
+description: >-
+  Just a boring website with contact details for the programmer 'six-two'.
+baseurl: ""
+url: ""
+
+
+email: six-two@tutanota.com
+github_username:  six-two
+gitlab_username:  six-two
+keybase_username: sixtwo
+telegram_username:  six-two
+hackerone_username: six-two
+
+img_path: /assets/img/
+css_path: /assets/css/
+
+version: development
+
+theme: minima
+feed:
+  path: /please_ignore_this_file.xml
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - .gitignore
+  - .bundle
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md

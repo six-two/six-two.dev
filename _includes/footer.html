@@ -1,0 +1,26 @@
+{% if page.footer %}
+  {% if page.footer != "hidden" %}
+    <footer class="site-footer">
+      <div class="wrapper">
+        <div class="footer-container">
+          {{ page.footer }}
+        </div>
+      </div>
+    </footer>
+  {% endif %}
+{% else %}
+  <footer class="site-footer">
+    <div class="wrapper">
+      <div class="footer-container">
+        I have no <code>Control</code> and can’t hit <code>Pause</code>.
+        I can’t see an <code>End</code> and I don’t think there is an <code>Escape</code>.
+        I don’t even have a <code>Home</code> or a <code>Space</code> anymore.
+        <br>
+        Yeah, I really need to buy a new keyboard 😉.
+        You can support me by
+        <a href="/donate" title="Although a pizza will beat a coffee every time">buying me a coffee</a> or
+        <a href="/work" title="<sarcasm>I'm great at multitasking. I can waste time, be unproductive, and procrastinate all at once.</sarcasm>">hiring me</a>.
+      </div>
+    </div>
+  </footer>
+{% endif %}

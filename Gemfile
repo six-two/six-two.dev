@@ -7,6 +7,7 @@ gem "jekyll", "~> 4.0.0"                    # For local testing
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  # gem "jekyll-feed", "~> 0.12.1"
+  # gem "jekyll-press"  # causes a name error
+  gem "jekyll-sitemap"
   gem "minima", "~> 2.5"
 end

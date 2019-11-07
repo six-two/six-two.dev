@@ -20,6 +20,9 @@ theme: minima
 feed:
   path: /please_ignore_this_file.xml
 
+plugins:
+  - jekyll-sitemap
+
 exclude:
   - .sass-cache/
   - .jekyll-cache/

@@ -16,8 +16,6 @@ hackerone_username: six-two
 img_path: /assets/img/
 css_path: /assets/css/
 
-version: development
-
 theme: minima
 feed:
   path: /please_ignore_this_file.xml

@@ -3,7 +3,7 @@
   {% include head.html %}
 
   <body class="page-body">
-    {% if site.version != stable %}
+    {% if jekyll.environment != "gitlab" %}
       <div class="message-box warning-message"><span>Warning:</span> This version is a development version and might contain errors, unfinished pages, bad spelling and incorrect information!
         Please use the <a href="https://six-two.gitlab.io/">stable version</a> instead.
       </div>

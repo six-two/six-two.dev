@@ -3,9 +3,18 @@
   {% include head.html %}
 
   <body class="page-body">
-    {% if jekyll.environment != "gitlab" %}
-      <div class="message-box warning-message"><span>Warning:</span> This version is a development version and might contain errors, unfinished pages, bad spelling and incorrect information!
-        Please use the <a href="https://six-two.gitlab.io/">stable version</a> instead.
+    {% if site.baseurl != site.stable_baseurl %}
+      <div class="message-box warning-message">
+        <span>Warning:</span>
+        This version is a development version and might contain errors, unfinished pages, bad spelling and incorrect information!
+        Please use the <a href="{{ site.stable_baseurl }}">stable version</a> instead.
+      </div>
+    {% endif %}
+
+    {% if jekyll.environment != "production" %}
+      <div class="message-box warning-message">
+        <span>Warning:</span>
+        This version was built with the <code>{{ jekyll.environment }}</code> environment. Some features might be missing.
       </div>
     {% endif %}
 

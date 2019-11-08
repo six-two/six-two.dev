@@ -5,6 +5,7 @@ description: >-
 baseurl: ""
 url: ""
 
+stable_baseurl: "https://six-two.gitlab.io"
 
 email: six-two@tutanota.com
 github_username:  six-two
@@ -22,6 +23,14 @@ feed:
 
 plugins:
   - jekyll-sitemap
+  - jekyll-minifier
+
+jekyll-minifier:
+  remove_spaces_inside_tags: true
+  remove_multi_spaces: true
+  remove_comments: true
+  remove_intertag_spaces: true
+  compress_css: true
 
 exclude:
   - .sass-cache/
@@ -32,8 +41,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - vendor/
   - README.md

@@ -2,10 +2,11 @@
 layout: minimal
 title: TODO
 permalink: /todo
+sitemap: False
 ---
 
 # TODO
-- Write a bio? (/about)
+- Write a bio (/about)
 - Verify my gitlab account and web page with keybase
 - Create Paypal account for six-two
 - Make the cv page look better
@@ -14,6 +15,6 @@ permalink: /todo
 
 ## Nice to have
 - Remove the feed
-- Minify the html, css, etc
 - Compress the pages (https://webmasters.stackexchange.com/questions/119670/how-do-you-serve-jekyll-pages-with-gzip-compression-on-gitlab-pages)
 - Put something better on the home page (/)
+- Convincing Github pages to compress the damn html (compressing css seems to work)

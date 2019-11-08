@@ -6,6 +6,7 @@ permalink: /
 
 <h2 class="section-header">This website has</h2>
  - Humor. The idea of using it in tooltips was shamelessly copied from <a href="https://www.xkcd.com/" title="This tooltip is not funny, but the link is (probably).">xkcd</a>.
+ - Some information about [me](/about "Maybe it's true. Maybe I am a dog that can type. On the internet you can never be sure. But a dog that can create its own website would be pretty impressive.").
  - A list of my official <a href="/contact">online accounts</a>. Do not trust other accounts, that claim to be me.
  - A list of ways to <a href="/donate" title="Don't ask why. Just do it 😉">send me money</a>.
  - A <a href="/work" title="Wow, that sounds like a bad illness or a strange plant.">curriculum vitae</a>.

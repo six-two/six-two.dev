@@ -3,7 +3,7 @@ layout: simple
 title: Want to hire me?
 menu_title: Hire me
 permalink: /work
-footer: Last updated in November 2019. If you want a more detailed and up to date resume, you can <a href="/contact">contact me</a>.
+footer: Last updated in December 2019. If you want a more detailed and up to date resume, you can <a href="/contact">contact me</a>.
 ---
 
 <h1>CV (Status: draft)</h1>
@@ -45,8 +45,9 @@ footer: Last updated in November 2019. If you want a more detailed and up to dat
 
   <div class="section-header">Interests</div>
   <ul>
-    <li>Sports: jogging, judo, kanoeing</li>
-    <li>Programming</li>
     <li>Cyber security</li>
+    <li>Programming</li>
+    <li>Sports: jogging, judo, kanoeing</li>
+    <li>Reading</li>
   </ul>
 </div>

@@ -1,4 +1,4 @@
-image: ruby:2.6.5
+image: jekyll/jekyll:4.0
 
 variables:
   JEKYLL_ENV: gitlab
@@ -6,8 +6,6 @@ variables:
 
 before_script:
   - ruby --version
-  - gem install therubyracer
-  - gem install bundler
   - bundle --version
   - bundle install
 

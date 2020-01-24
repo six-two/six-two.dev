@@ -1,13 +1,11 @@
 image: jekyll/jekyll:4.0
 
 variables:
-  JEKYLL_ENV: gitlab
+  JEKYLL_ENV: production
   LC_ALL: C.UTF-8
 
 before_script:
-  - ruby --version
-  - bundle --version
-  - bundle install
+  # - bundle install
 
 pages:
   stage: deploy

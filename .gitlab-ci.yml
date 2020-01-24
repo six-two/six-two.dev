@@ -5,7 +5,7 @@ variables:
   LC_ALL: C.UTF-8
 
 before_script:
-  # - bundle install
+  - bundle install
 
 pages:
   stage: deploy

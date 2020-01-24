@@ -5,9 +5,9 @@ description: >-
 baseurl: ""
 url: ""
 
-stable_baseurl: "https://six-two.gitlab.io"
+stable_baseurl: ""
 
-email: six-two@tutanota.com
+email: info@six-two.dev
 github_username:  six-two
 gitlab_username:  six-two
 keybase_username: sixtwo

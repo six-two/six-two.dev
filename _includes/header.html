@@ -15,11 +15,17 @@
       </a>
 
       <div class="trigger">
-        {% for my_page in site.pages %}
-          {% if my_page.menu_title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.menu_title }}</a>
-          {% endif %}
-        {% endfor %}
+        {% if page.custom_menu %}
+          {% for entry in page.custom_menu %}
+            <a class="page-link" href="{{ entry.url | prepend: site.baseurl }}">{{ entry.text }}</a>
+          {% endfor %}
+        {% else %}
+          {% for my_page in site.pages %}
+            {% if my_page.menu_title %}
+            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.menu_title }}</a>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
       </div>
     </nav>
   </div>

@@ -2,22 +2,46 @@
 layout: simple
 title: six-two
 permalink: /
+footer: "Last updated in January 2020"
+custom_menu:
+  - { text: "About", url: "/#about" }
+  - { text: "Contact", url: "/#contact" }
+  - { text: "Donate", url: "/#send-money" }
 ---
 
-<h2 class="section-header">This website has</h2>
- - Humor. The idea of using it in tooltips was shamelessly copied from <a href="https://www.xkcd.com/" title="This tooltip is not funny, but the link is (probably).">xkcd</a>.
- - Some information about [me](/about "Maybe it's true. Maybe I am a dog that can type. On the internet you can never be sure. But a dog that can create its own website would be pretty impressive.").
- - A list of my official <a href="/contact">online accounts</a>. Do not trust other accounts, that claim to be me.
- - A list of ways to <a href="/donate" title="Don't ask why. Just do it 😉">send me money</a>.
- - A <a href="/work" title="Wow, that sounds like a bad illness or a strange plant.">curriculum vitae</a>.
+<!-- Why are you looking at my source code? I am pretty sure I left no sensitive information in here -->
 
-<h2 class="section-header">Missing features</h2>
-I did not have enough time to *improve* my website with common design elements like:
- - Advertisements (especially the ones that are in invisible iframes).
- - "We are using cookies to ..." banners, that block half the page until you click OK.
- - Hundreds of external resources that make the page so slow, that it needs a loading animation.
- - I will not ask you to sign up for some newsletter every time you scroll to the bottom of a page.
- - An unprotected database with your social security number and credit card information.
- - Autoplay videos, that will ~~annoy~~ entertain you, until you can find the close button.
- - &lt;div&gt;Bad html, that somehow still works&lt;/span&gt;
- - And my all time favorite: Aggressive collection and selling of user data.
+<h2 class="section-header" id="about">About me</h2>
+I am a programmer from Germany.
+My current goal is to learn as much about cyber security as I can.
+When I am not in a small dark room in front of a glowing monitor (my natural habitat), I am meeting with friends, walking in the nearest forrest or jogging.
+
+<h2 class="section-header" id="contact">Contact me</h2>
+
+Platform | Username | Estimated response time
+---|--- | ---
+Email | [{{ site.email }}](mailto:{{ site.email }}) | one day
+Telegram | [{{ site.telegram_username }}](https://t.me/{{ site.telegram_username }}) | a few hours
+Treema | 5RRSCUKP | a few hours
+Keybase | [{{ site.keybase_username }}](https://keybase.io/{{ site.keybase_username }}) | a few hours to a day
+Discord | six-two#5891 | maybe this year
+
+
+<h2 class="section-header" id="send-money">Send me money</h2>
+<!-- Well, you probably have no reason to send me any money.
+But you can still buy me a pizza to show what a nice person you are. -->
+
+Platform | Address
+Paypal | [TODO](https://paypal.me")
+Keybase (Stellar crypto) | [{{site.keybase_username}}*keybase.io](https://keybase.io/{{site.keybase_username}})
+Stellar (crypto) | GD7SMMXVUJ2B2SSZ4VQWG7ECJXAN752IGIWJBWPGCXPNVLHPRVZD3BOP
+
+<h2 class="section-header">Other accounts</h2>
+
+Platform | Username
+---|---
+Github | [{{ site.github_username }}](https://github.com/{{ site.github_username }})
+Gitlab | [{{ site.gitlab_username }}](https://gitlab.com/{{ site.gitlab_username }})
+Hackerone | [{{ site.hackerone_username }}](https://hackerone.com/{{ site.hackerone_username }})
+
+<!-- Gitlab: user=six-two password=Buffy2015 -->

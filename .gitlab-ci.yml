@@ -6,6 +6,7 @@ variables:
 
 before_script:
   - ruby --version
+  - gem install therubyracer
   - gem install bundler
   - bundle --version
   - bundle install

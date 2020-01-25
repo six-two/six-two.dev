@@ -32,8 +32,8 @@ But you can still buy me a pizza to show what a nice person you are. -->
 
 Platform | Address
 ---|---
-Paypal | [TODO](https://paypal.me/)
-Crypto | TODO?
+Paypal | [paypal.me](https://paypal.me/patrickschlueter)
+Crypto | **Maybe in the future.**<br>In the meantime you can [contact me](/#contact) and I can create a wallet for whatever coin you have.
 
 <h2 class="section-header">Other accounts</h2>
 

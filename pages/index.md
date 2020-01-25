@@ -4,9 +4,9 @@ title: six-two
 permalink: /
 footer: "Last updated in January 2020"
 custom_menu:
-  - { text: "About", url: "/#about" }
-  - { text: "Contact", url: "/#contact" }
-  - { text: "Donate", url: "/#send-money" }
+  - { menu_title: "About", url: "/#about" }
+  - { menu_title: "Contact", url: "/#contact" }
+  - { menu_title: "Donate", url: "/#send-money" }
 ---
 
 <!-- Why are you looking at my source code? I am pretty sure I left no sensitive information in here -->
@@ -31,6 +31,7 @@ Discord | six-two#5891 | maybe this year
 But you can still buy me a pizza to show what a nice person you are. -->
 
 Platform | Address
+---|---
 Paypal | [TODO](https://paypal.me/)
 Crypto | TODO?
 

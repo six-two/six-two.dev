@@ -17,13 +17,21 @@ a {
   }
 }
 
-.site-title {
-  margin-top: 4px;
+.site-header {
+  border-top: 0px;
+  vertical-align: middle;
 
   img {
     width: 40px;
   }
 }
+
+.site-footer {
+  color: gray;
+  text-align: center;
+}
+
+// -------------------------------- section header  ----------------------------
 
 .section-header {
   display: flex;
@@ -43,13 +51,10 @@ a {
   margin-left: 0.5em;
 }
 
-.site-footer {
-  color: gray;
-  text-align: center;
-}
 
 // ---------------------------------- Message/warning boxes --------------------
 // By default it is a blue box, but you can use the "*-message" classes to change that
+
 .message-box {
   color: #303030;
   border-radius: 10px;

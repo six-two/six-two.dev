@@ -17,8 +17,12 @@ a {
   }
 }
 
-.site-icon {
-  width: 40px;
+.site-title {
+  margin-top: 4px;
+
+  img {
+    width: 40px;
+  }
 }
 
 .section-header {
@@ -39,15 +43,9 @@ a {
   margin-left: 0.5em;
 }
 
-.footer-container {
+.site-footer {
+  color: gray;
   text-align: center;
-}
-
-
-// ---------------------------------- CV website -------------------------------
-.cv .section-header {
-  /* font-weight: bold; */
-  font-size: 2em;
 }
 
 // ---------------------------------- Message/warning boxes --------------------

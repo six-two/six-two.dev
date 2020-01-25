@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="wrapper">
     <a class="site-title" href="{{ site.baseurl }}/" title="Go back to start. Do not pass go. Do not collect $$$.">
-      <img class="site-icon" src="{{ site.img_path }}six-two-round-black.png" alt="my logo">
+      <img class="site-icon" src="{{ site.img_path }}sixtwo_icon_64.png" alt="my logo">
       {{ site.title }}
     </a>
 
@@ -24,7 +24,7 @@
         {% else %}
           {% for my_page in site.pages %}
             {% if my_page.menu_title %}
-            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.menu_title }}</a>
+              <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.menu_title }}</a>
             {% endif %}
           {% endfor %}
         {% endif %}

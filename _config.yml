@@ -1,16 +1,13 @@
 title: six-two
 author: six-two
 description: >-
-  Just a boring website with contact details for the programmer 'six-two'.
+  Just a simple website with my contact details.
 baseurl: ""
 url: ""
-
-stable_baseurl: ""
 
 email: info@six-two.dev
 github_username:  six-two
 gitlab_username:  six-two
-keybase_username: sixtwo
 telegram_username:  six-two
 hackerone_username: six-two
 

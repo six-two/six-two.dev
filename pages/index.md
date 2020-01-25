@@ -23,7 +23,6 @@ Platform | Username | Estimated response time
 Email | [{{ site.email }}](mailto:{{ site.email }}) | one day
 Telegram | [{{ site.telegram_username }}](https://t.me/{{ site.telegram_username }}) | a few hours
 Treema | 5RRSCUKP | a few hours
-Keybase | [{{ site.keybase_username }}](https://keybase.io/{{ site.keybase_username }}) | a few hours to a day
 Discord | six-two#5891 | maybe this year
 
 
@@ -32,9 +31,8 @@ Discord | six-two#5891 | maybe this year
 But you can still buy me a pizza to show what a nice person you are. -->
 
 Platform | Address
-Paypal | [TODO](https://paypal.me")
-Keybase (Stellar crypto) | [{{site.keybase_username}}*keybase.io](https://keybase.io/{{site.keybase_username}})
-Stellar (crypto) | GD7SMMXVUJ2B2SSZ4VQWG7ECJXAN752IGIWJBWPGCXPNVLHPRVZD3BOP
+Paypal | [TODO](https://paypal.me/)
+Crypto | TODO?
 
 <h2 class="section-header">Other accounts</h2>
 

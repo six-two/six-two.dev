@@ -11,6 +11,7 @@ gitlab_username:  six-two
 telegram_username:  six-two
 hackerone_username: six-two
 
+js_path: /assets/js/
 img_path: /assets/img/
 css_path: /assets/css/
 
@@ -22,12 +23,22 @@ plugins:
   - jekyll-sitemap
   - jekyll-minifier
 
+# Encryption stuff
+enc-default-class: encrypted-info
+enc-default-cookie: pwd-enc-info
+enc-bank-eur: "abc"
+enc-bank-nzd: "abc"
+enc-bank-usd: "abc"
+
+# Minify html, css, js, ...
 jekyll-minifier:
   remove_spaces_inside_tags: true
   remove_multi_spaces: true
   remove_comments: true
   remove_intertag_spaces: true
   compress_css: true
+  uglifier_args:
+    harmony: true
 
 exclude:
   - .sass-cache/

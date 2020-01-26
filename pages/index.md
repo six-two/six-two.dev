@@ -4,9 +4,9 @@ title: six-two
 permalink: /
 footer: "Last updated in January 2020"
 custom_menu:
-  - { menu_title: "About", url: "/#about" }
-  - { menu_title: "Contact", url: "/#contact" }
-  - { menu_title: "Donate", url: "/#send-money" }
+  - { menu_title: "About", url: "#about" }
+  - { menu_title: "Contact", url: "#contact" }
+  - { menu_title: "Donate", url: "#send-money" }
 ---
 
 <!-- Why are you looking at my source code? I am pretty sure I left no sensitive information in here -->
@@ -33,6 +33,7 @@ But you can still buy me a pizza to show what a nice person you are. -->
 Platform | Address
 ---|---
 Paypal | [paypal.me](https://paypal.me/patrickschlueter)
+International Bank Accounts | [EUR](/bank-accounts#eur), [USD](/bank-accounts#usd), [NZD](/bank-accounts#nzd)
 Crypto | **Maybe in the future.**<br>In the meantime you can [contact me](/#contact) and I can create a wallet for whatever coin you have.
 
 <h2 class="section-header">Other accounts</h2>

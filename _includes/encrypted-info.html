@@ -1,0 +1,14 @@
+<div
+  class="{{ include.class | default: site.enc-default-class }} message-box"
+  data-pwd-cookie="{{ include.cookie | default: site.enc-default-cookie }}"
+  data-replace-scope="outer"
+  encrypted-data="{{ include.encrypted }}">
+    This information is hidden to protect it from automated web crawlers.
+    <br>
+    Click the <code>I am not a robot</code> button to show it.
+    <br>
+    <input
+      type="button"
+      value="I am not a robot"
+      onclick="ClickToDecrypt.byClass('{{ include.class | default: site.enc-default-class }}');" />
+</div>

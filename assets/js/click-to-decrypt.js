@@ -3,130 +3,128 @@
 var ClickToDecrypt = (function() {
   var api = {};
 
-  //storage functions, you can modify these to use localStorage, sessionStorage or cookies
-  var storage = {
+  // Storage functions. You can modify these to use localStorage, sessionStorage, cookies
+  // or whatever technologies will be invented in the future
+  var my_storage_implementation = {
     put: function(key, value) {
       localStorage.setItem(key, value);
     },
-    get: function(key) {//return undefined if it gets {key: "none"}
-      return key == 'none' ? undefined : localStorage.getItem(key);
+    get: function(key) {
+      return localStorage.getItem(key);
     },
     clear: function(){
       localStorage.clear();
     }
   };
 
-  function getAttributeOrDefault(elem, attr, defaultValue) {
+  function getAttributeOr(elem, attr, defaultValue) {
     var tmp = elem.getAttribute(attr);
     return tmp ? tmp : defaultValue;
   }
 
-  function tryDecrypt(pwd, ciphertext) {
-    var ret = undefined;
-    try {
-      ret = sjcl.decrypt(pwd, ciphertext);
-    } catch (err) {}
-    return ret;
-  }
-
-
-  function findPasswordForElement(e, tries) {
-    var ciphertext = e.getAttribute("data-encrypted");
-    if (!ciphertext) {
-      console.log("Warning: Missing 'data-encrypted' attribute");
-      return undefined;
-    }
-    ciphertext = window.atob(ciphertext)
-
-    var passwordCookie = getAttributeOrDefault(e, "data-pwd-cookie", "none");
-
-    return findPasswordFor(ciphertext, "", passwordCookie, tries);
-  }
-
-  function findPasswordFor(ciphertext, passwordGuess, passwordCookie, tries, promptText = "Password") {
-    var cookiePwd = storage.get(passwordCookie);
-    if (tryDecrypt(cookiePwd, ciphertext)) {
-      return cookiePwd;
-    } else if (tryDecrypt(passwordGuess, ciphertext)) {
-      return passwordGuess;
-    } else {
-      tries = tries == -1 ? api.passwordTries : tries;
-
-      for (var i = 0; i < tries; i++) {
-        var pwd = prompt(promptText);
-        if (!pwd) {
-          break; //user pressed cancel
-        }
-        if (tryDecrypt(pwd, ciphertext)) {
-          return pwd;
-        }
+  function decrypt(ciphertext, cookieName, promptText, maxTries) {
+    if (cookieName) {
+      // Try the password stored in the cookie cookie.
+      // The method is called with cookieName=null, since the cookie does not need to be updated
+      var plaintext = tryDecrypt(ciphertext, api.storage.get(cookieName), null);
+      if (plaintext) {
+        return plaintext;
       }
     }
-    return undefined;
+    // Let the user try up to maxTries passwords
+    for (var i = 0; i < maxTries; i++) {
+      // Get a password from the user
+      var pwd = prompt(promptText);
+      if (!pwd) {
+        // The user pressed cancel
+        return null;
+      }
+      // Try the user supplied password, update the cookie on success
+      var plaintext = tryDecrypt(ciphertext, pwd, cookieName);
+      if (plaintext) {
+        return plaintext;
+      }
+    }
+    // The user cound not guess the password
+    return null;
   }
 
-  //the real code that does stuff
-  function decryptElement(elem, password) {
+
+  function tryDecrypt(ciphertext, pwd, cookieName) {
     try {
-      var replaceScope = getAttributeOrDefault(elem, "data-replace-scope", "inner")
-        .trim().toLowerCase(); //make it easy to compare
-      var ciphertext = elem.getAttribute("data-encrypted");
-
-      if (ciphertext) {
-        var plainText = tryDecrypt(password, window.atob(ciphertext));
-        if (plainText) {
-          if (api.useStorage == true) {
-            var passwordCookie = getAttributeOrDefault(elem, "data-pwd-cookie", "none");
-            if (passwordCookie !== "none") {
-              storage.put(passwordCookie, password);
-            }
-          }
-
-          if (replaceScope === "outer") {
-            try {
-              elem.outerHTML = plainText;
-            } catch (err) {
-              console.log('[click-to-decrypt] Outer replace failed!');
-              elem.innerHTML = plainText; //fallback
-            }
-          } else { //inner is the default case
-            elem.innerHTML = plainText;
-          }
+      // Try to decrypt
+      var plaintext = sjcl.decrypt(pwd, ciphertext);
+      if (plaintext) {
+        // Update the cookie if a name was supplied
+        if (cookieName) {
+          api.storage.put(cookieName, pwd)
         }
+        return plaintext
       }
     } catch (err) {
-      console.log(err.message);
+    }
+    // Inform the caller, that the decryption failed
+    return null;
+  }
+
+  function internalDecryptClass(className) {
+    var list = document.getElementsByClassName(className);
+    list = Array.from(list);
+    console.debug(`Decrypting ${list.length} elements with class "${className}"`);
+
+    while (list.length > 0) {
+      // remove and return first element
+      var e = list.shift();
+
+      // decrypt the element. Exit this method if the decryption failed
+      // (for example because it was cancelled by the user)
+      if (!internalDecryptElement(e)) {
+        console.warn(`Failed element decryption. The other ${list.length} remaining elements will not be decrypted`);
+        return;
+      }
     }
   }
 
-  var api = {
-    useStorage: true,
-    passwordTries: 3,
+  function internalDecryptElement(e) {
+    var enc_data = e.getAttribute("ctd-data");
+    if (!enc_data) {
+      console.error("No data to decrypt");
+    } else {
+      // Load all the required data from the elements attributes
+      var ciphertext = window.atob(enc_data);
+      var cookieName = getAttributeOr(e, "ctd-cookie", null);
+      var promptText = getAttributeOr(e, "ctd-prompt", api.defaultPrompt);
+      var maxTries = getAttributeOr(e, "ctd-tries", api.defaultTries);
 
-    byClass: function(matchClass, tries = -1) {
-      var list = document.getElementsByClassName(matchClass);
-      if (list.length > 0) {
-        var pwd = findPasswordForElement(list[0], tries);
-        for (var i = 0; i < list.length; i++) {
-          decryptElement(list[i], pwd);
+      var plaintext = decrypt(ciphertext, cookieName, promptText, maxTries);
+      if (plaintext) {
+        try {
+          e.outerHTML = plaintext;
+        } catch (err) {
+          console.error("Failed replacing the elements outer HTML. Cause:", err)
         }
       }
-    },
+    }
+  }
 
-    byId: function(elemId, tries = -1) {
-      api.element(document.getElementById(elemId), tries);
-    },
 
-    element: function(elem, tries = -1) {
-      decryptElement(elem, findPasswordForElement(elem, tries));
-    },
+  var api = {
+    // Data
+    storage: my_storage_implementation,
+    defaultTries: 3,
+    defaultPrompt: 'Password:',
 
-    putDefaultPassword: function(key, value) {
-      if (!storage.get(key)){
-        storage.put(key, value);
+    // Functions
+    decryptClass: internalDecryptClass,
+    decryptElement: internalDecryptElement,
+    decryptId: function(elemId) {
+      var e = document.getElementById(elemId)
+      if (e) {
+        internalDecryptElement(document.getElementById(elemId));
+      } else {
+        console.error(`No element with id "${elemId}"`)
       }
     },
-
     forgetAllPasswords: function() {
       storage.clear();
     }

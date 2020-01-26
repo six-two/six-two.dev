@@ -20,12 +20,12 @@ Don't like banks? See other [ways to send me money](/#send-money).
 
 
 <h2 class="section-header" id="eur">Euro (EUR)</h2>
-{% include encrypted-info.html encrypted=site.enc-bank-eur %}
+{% include encrypted-info.html class="ctd-bank-eur" data=site.ctd-bank-eur %}
 
 
 <h2 class="section-header" id="usd">US Dollar (USD)</h2>
-{% include encrypted-info.html encrypted=site.enc-bank-usd %}
+{% include encrypted-info.html class="ctd-bank-usd" data=site.ctd-bank-usd %}
 
 
-<h2 class="section-header" id="eur">New Zealand Dollar (NZD)</h2>
-{% include encrypted-info.html encrypted=site.enc-bank-nzd %}
+<h2 class="section-header" id="nzd">New Zealand Dollar (NZD)</h2>
+{% include encrypted-info.html class="ctd-bank-nzd" data=site.ctd-bank-nzd %}

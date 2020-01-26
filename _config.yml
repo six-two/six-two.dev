@@ -24,11 +24,11 @@ plugins:
   - jekyll-minifier
 
 # Encryption stuff
-enc-default-class: encrypted-info
-enc-default-cookie: pwd-enc-info
-enc-bank-eur: "abc"
-enc-bank-nzd: "abc"
-enc-bank-usd: "abc"
+ctd-prompt: "Password required"
+ctd-tries: 3
+ctd-bank-eur: "eyJpdiI6Ims1Y2pwVmdTdi95QlhJaGNtQllaT1E9PSIsInYiOjEsIml0ZXIiOjEwMDAwLCJrcyI6MjU2LCJ0cyI6NjQsIm1vZGUiOiJjY20iLCJhZGF0YSI6IiIsImNpcGhlciI6ImFlcyIsInNhbHQiOiJFUW0vZWVrUnNjYz0iLCJjdCI6InYxdEJ0WXduazJmNFpBSElBemxXcStNMFBxVFhpcWdWZ1laNko0RHVETXM0cFVaeW10czBGa2g4WVlpZGI0REJiTGdpNVE9PSJ9"
+ctd-bank-nzd: "eyJpdiI6Ims1Y2pwVmdTdi95QlhJaGNtQllaT1E9PSIsInYiOjEsIml0ZXIiOjEwMDAwLCJrcyI6MjU2LCJ0cyI6NjQsIm1vZGUiOiJjY20iLCJhZGF0YSI6IiIsImNpcGhlciI6ImFlcyIsInNhbHQiOiJFUW0vZWVrUnNjYz0iLCJjdCI6InYxdEJ0WXduazJmNFpBSElBemxXcStNMFBxVFhpcWdWZ1laNko0RHVETXM0cFVaeW10czBGa2g4WVlpZGI0REJiTGdpNVE9PSJ9"
+ctd-bank-usd: "eyJpdiI6Ims1Y2pwVmdTdi95QlhJaGNtQllaT1E9PSIsInYiOjEsIml0ZXIiOjEwMDAwLCJrcyI6MjU2LCJ0cyI6NjQsIm1vZGUiOiJjY20iLCJhZGF0YSI6IiIsImNpcGhlciI6ImFlcyIsInNhbHQiOiJFUW0vZWVrUnNjYz0iLCJjdCI6InYxdEJ0WXduazJmNFpBSElBemxXcStNMFBxVFhpcWdWZ1laNko0RHVETXM0cFVaeW10czBGa2g4WVlpZGI0REJiTGdpNVE9PSJ9"
 
 # Minify html, css, js, ...
 jekyll-minifier:

@@ -2,7 +2,7 @@
 layout: simple
 title: six-two
 permalink: /
-footer: "Last updated in January 2020"
+footer: "Last updated in May 2020"
 custom_menu:
   - { menu_title: "About", url: "#about" }
   - { menu_title: "Contact", url: "#contact" }

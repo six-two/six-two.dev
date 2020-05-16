@@ -25,6 +25,9 @@ Telegram | [{{ site.telegram_username }}](https://t.me/{{ site.telegram_username
 Treema | 5RRSCUKP | a few hours
 Discord | six-two#5891 | maybe this year
 
+<h2 class="section-header" id="contact">My Projects</h2>
+Take a look at [my projects page](https://projects.six-two.dev). It is a bit empty, since I only upload projects that might be useful to others and are at least somewhat stable.
+
 
 <h2 class="section-header" id="send-money">Send me money</h2>
 <!-- Well, you probably have no reason to send me any money.

@@ -3,7 +3,7 @@ layout: simple
 title: CV
 permalink: /cv/
 custom_css:
- - cv
+ - cv-select
 ---
 
 # Choose your language

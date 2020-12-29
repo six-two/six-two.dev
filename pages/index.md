@@ -2,7 +2,7 @@
 layout: simple
 title: six-two
 permalink: /
-footer: "Last updated in May 2020"
+footer: "Last updated in December 2020"
 custom_menu:
   - { menu_title: "About", url: "#about" }
   - { menu_title: "Contact", url: "#contact" }
@@ -23,11 +23,12 @@ Platform | Username | Estimated response time
 Email | [{{ site.email }}](mailto:{{ site.email }}) | one day
 Telegram | [{{ site.telegram_username }}](https://t.me/{{ site.telegram_username }}) | a few hours
 Treema | 5RRSCUKP | a few hours
-Discord | six-two#5891 | maybe this year
+Discord | six-two#5891 | N/A
+
+Don't have any of them? Use this simple [contact form](/contact/)!
 
 <h2 class="section-header" id="contact">My Projects</h2>
-Take a look at [my projects page](https://projects.six-two.dev). It is a bit empty, since I only upload projects that might be useful to others and are at least somewhat stable.
-
+Take a look at [my projects page](https://projects.six-two.dev).
 
 <h2 class="section-header" id="send-money">Send me money</h2>
 <!-- Well, you probably have no reason to send me any money.

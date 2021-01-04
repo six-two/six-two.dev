@@ -2,7 +2,7 @@
 layout: simple
 title: Bank accounts
 permalink: /bank-accounts
-footer: "Last updated in May 2020"
+footer: "Last updated in January 2021"
 sitemap: False
 custom_menu:
   - { menu_title: "EUR", url: "#eur" }

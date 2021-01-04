@@ -2,14 +2,12 @@
 layout: simple
 title: six-two
 permalink: /
-footer: "Last updated in December 2020"
+footer: "Last updated in January 2021"
 custom_menu:
   - { menu_title: "About", url: "#about" }
   - { menu_title: "Contact", url: "#contact" }
   - { menu_title: "Donate", url: "#send-money" }
 ---
-
-<!-- Why are you looking at my source code? I am pretty sure I left no sensitive information in here -->
 
 <h2 class="section-header" id="about">About me</h2>
 I am a programmer from Germany.
@@ -21,8 +19,8 @@ When I am not in a small dark room in front of a glowing monitor (my natural hab
 Platform | Username | Estimated response time
 ---|--- | ---
 Email | [{{ site.email }}](mailto:{{ site.email }}) | one day
-Telegram | [{{ site.telegram_username }}](https://t.me/{{ site.telegram_username }}) | a few hours
-Treema | 5RRSCUKP | a few hours
+Telegram | [{{ site.telegram_username }}](https://t.me/{{ site.telegram_username }}) | one day
+Treema | 5RRSCUKP | one day
 Discord | six-two#5891 | N/A
 
 Don't have any of them? Use this simple [contact form](https://contact.six-two.dev)!
@@ -31,8 +29,6 @@ Don't have any of them? Use this simple [contact form](https://contact.six-two.d
 Take a look at [my projects page](https://projects.six-two.dev).
 
 <h2 class="section-header" id="send-money">Send me money</h2>
-<!-- Well, you probably have no reason to send me any money.
-But you can still buy me a pizza to show what a nice person you are. -->
 
 Platform | Address
 ---|---
@@ -47,5 +43,3 @@ Platform | Username
 Github | [{{ site.github_username }}](https://github.com/{{ site.github_username }})
 Gitlab | [{{ site.gitlab_username }}](https://gitlab.com/{{ site.gitlab_username }})
 Hackerone | [{{ site.hackerone_username }}](https://hackerone.com/{{ site.hackerone_username }})
-
-<!-- Gitlab: user=six-two password=Buffy2015 -->
